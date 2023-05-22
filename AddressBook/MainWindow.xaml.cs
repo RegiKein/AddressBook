@@ -22,11 +22,13 @@ namespace AddressBook
     {
         public MainWindow()
         {
-            try { 
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            DataContext = new ApplicationViewModel();
-            } catch (Exception ex)
+                DataContext = new ApplicationViewModel();
+            }
+            catch (Exception ex)
             {
                 throw;
             }
@@ -46,7 +48,7 @@ namespace AddressBook
             switch (result)
             {
                 case MessageBoxResult.Yes:
-                    ApplicationViewModel.SaveKostil();
+                    ApplicationViewModel.SaveInFile();
                     break;
                 case MessageBoxResult.No:
                     break;
@@ -66,7 +68,7 @@ namespace AddressBook
 
             PhoneTextBox.IsEnabled = true;
         }
-        
+
         private void DisabledButton_Click(object sender, RoutedEventArgs e)
         {
             SurnameTextBox.IsEnabled = false;

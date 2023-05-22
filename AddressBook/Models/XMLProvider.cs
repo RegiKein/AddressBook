@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 using System.Xml.Serialization;
 
 namespace AddressBook.Models
 {
     class XMLProvider
     {
-
-        static XmlDocument? XmlDoc;
-
-        static XmlElement? xRoot;
-
         static ObservableCollection<Address>? LastLoadAddresBook;
 
         private static string FileName = string.Empty;
@@ -26,12 +17,6 @@ namespace AddressBook.Models
             Logger.InitLogger();
 
             FileName = fileName;
-
-           /* XmlDoc = new XmlDocument();
-
-            XmlDoc.Load(fileName);
-
-            xRoot = XmlDoc.DocumentElement;*/
         }
 
         static public ObservableCollection<Address> ReadFile()
@@ -100,6 +85,8 @@ namespace AddressBook.Models
             }
         }
 
+
+        // TODO: Пока оставить тут. пригодится при реализации активного хранения изменений
         /*public void AddElement(Address address)
         {
             if (xRoot != null)

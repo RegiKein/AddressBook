@@ -6,7 +6,7 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:AddressBook"
         mc:Ignorable="d"
-        Title="Адресная книга" Height="450" Width="850" FontSize="14" Icon="/icon.ico" Closing="Window_Closing">
+        Title="Адресная книга" Height="450" Width="850" FontSize="14" Icon="/Content/icon.ico" Closing="Window_Closing">
 
     <Grid Width="850" Height="450">
         <Grid.ColumnDefinitions>

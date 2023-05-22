@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Xml;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AddressBook.Models
 {
@@ -25,14 +18,6 @@ namespace AddressBook.Models
         public string Patronymic { get; set; }
 
         public string Phone { get; set; }
-
-        public string StringFIO
-        {
-            get
-            {
-                return Surname + " " + Name + " " + Patronymic;
-            }
-        }
 
         public Address()
         {
